@@ -1,0 +1,9 @@
+#!mast .ruby bin lib man qed test [A-Z]*.*
+.ruby
+lib/detroit-locat.rb
+man/detroit-locat.5
+man/detroit-locat.5.html
+man/detroit-locat.5.ronn
+README.rdoc
+GPL3.txt
+COPYING.rdoc

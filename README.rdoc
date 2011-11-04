@@ -1,0 +1,27 @@
+= Detroit LOCat Tool
+
+
+== DESCRIPTION
+
+The LOCat tool provides detailed LOC chart generation during
+the standard `analyize` phase.
+
+See http://rubyworks.github.com/locat for more information.
+
+
+== INSTALL
+
+Per the usual gem install process:
+
+  $ gem install detroit-locat
+
+
+== COPYRIGHT
+
+Copyright (c) 2011 Rubyworks
+
+Detroit LOCat is distributable in accordance with the *GPL v.3*
+open source license.
+
+See COPYING.rdoc and GPL3.txt file for details.
+

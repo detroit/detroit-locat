@@ -1,0 +1,64 @@
+detroit-locat(5) - generate detailed loc analysis reports
+=========================================================
+
+## DESCRIPTION
+
+The LOCat plug-in for Detroit utilize the LOCat command line tool
+to generate detailed LOC analysis charts for Ruby projects.
+
+
+## OPTIONS
+
+The following options can be used in the Detroit assembly file
+for defining a LOCat service.
+
+  * `path` - File paths to analyze. Default is `lib`.
+
+  * `exclude` - Exclude subpaths of `path`.
+
+  * `ignore` - Ignore subpaths of `path` based on basename of path.
+
+  * `config` - LOCat configuration files to apply.
+
+  * `format` - Format of output. Defaults to the extension of `output`.
+
+  * `output` - File in which to save results.
+
+
+## EXAMPLES
+
+The typical assembly file entry will be something like:
+
+    locat:
+      path: [lib, test]
+      output: log/locat.html
+
+Of course, these are the default settings so a simple:
+
+    locat:
+      active: true
+
+will likely do the trick.
+
+
+## RESOURCES
+
+For more information:
+
+  * [API Reference](http://rubydoc.info/gems/detroit-locat)
+
+  * [Development Site](http://github.com/detroit/detroit-locat)
+
+  * [Detroit Project](http://detroit.github.com)
+
+
+## COPYRIGHT
+
+Copyright (c) 2011 Thomas Sawyer, Rubyworks
+
+Detroit LOCat is distributable in accordance with the GPL v3.0 license.
+
+
+## SEE ALSO
+
+detroit(1), locat(1)

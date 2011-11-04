@@ -25,8 +25,8 @@ dnote:
 locat:
   active: false
 
-github:
-  active: true
+#github:
+#  active: true
 
 announce:
   service: email

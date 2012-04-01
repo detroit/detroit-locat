@@ -23,10 +23,12 @@ extra: {}
 load_path:
 - lib
 revision: 0
+created: '2011-10-16'
 summary: LOCat plugin for Detroit
 title: Detroit LOCat
 version: 0.2.0
 name: detroit-locat
+suite: detroit
 description: ! "LOCat plugin for Detroit build system. Generate detailed LOC charts
   for \nyour Ruby project."
 organization: rubyworks

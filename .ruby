@@ -8,12 +8,11 @@ copyrights:
 - holder: Rubyworks
   year: '2011'
   license: GPL3
-replacements: []
-alternatives: []
 requirements:
 - name: locat
 - name: detroit
 dependencies: []
+alternatives: []
 conflicts: []
 repositories: []
 resources:
@@ -26,8 +25,9 @@ load_path:
 revision: 0
 summary: LOCat plugin for Detroit
 title: Detroit LOCat
-version: 0.1.0
+version: 0.2.0
 name: detroit-locat
 description: ! "LOCat plugin for Detroit build system. Generate detailed LOC charts
   for \nyour Ruby project."
-date: '2011-11-04'
+organization: rubyworks
+date: '2012-04-01'

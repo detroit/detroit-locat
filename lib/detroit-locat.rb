@@ -36,11 +36,20 @@ module Detroit
     attr_accessor :output
 
 
-    #  A S S E M B L Y  S T A T I O N S
+    #  A S S E M B L Y  M E T H O D S
 
     #
-    def station_generate
-      generate
+    def assemble?(station, options={})
+      case station
+      when :generate then true
+      end
+    end
+
+    # Attach to the :generate phase.
+    def assemble(station, options={})
+      case station
+      when :generate then generate
+      end
     end
 
     #  S E R V I C E  M E T H O D S
@@ -64,7 +73,10 @@ module Detroit
 
     #
     def collect_files
-      amass(path, exclude, ignore)
+      f = [path].flatten.compact
+      x = [exclude].flatten.compact
+      i = [ignore].flatten.compact
+      amass(f, x, i)
     end
 
     #

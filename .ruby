@@ -9,8 +9,9 @@ copyrights:
   year: '2011'
   license: GPL3
 requirements:
-- name: locat
 - name: detroit
+  version: 0.3.0+
+- name: locat
 dependencies: []
 alternatives: []
 conflicts: []

@@ -9,8 +9,8 @@ to generate detailed LOC analysis charts for Ruby projects.
 
 ## OPTIONS
 
-The following options can be used in the Detroit assembly file
-for defining a LOCat service.
+The following options can be used in the Detroit toolchain file
+for defining a LOCat tool instance.
 
   * `path` - File paths to analyze. Default is `lib`.
 
@@ -54,7 +54,7 @@ For more information:
 
 ## COPYRIGHT
 
-Copyright (c) 2011 Thomas Sawyer, Rubyworks
+Copyright (c) 2011 Rubyworks
 
 Detroit LOCat is distributable in accordance with the GPL v3.0 license.
 

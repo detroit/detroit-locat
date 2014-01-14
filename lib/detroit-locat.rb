@@ -1,11 +1,31 @@
-require 'detroit/tool'
+require 'detroit-standard'
 
 module Detroit
 
+  ##
+  # LOCat is tool for generating LOC statistics.
+  #
+  # This tool targets the following stations of the standard toolchain:
+  #
+  # * generate
   #
   class LOCat < Tool
 
-    #  A T T R I B U T E S
+    # Attach to the `generate` phase.
+    #
+    # @!parse 
+    #   include Standard
+    #
+    assembly Standard
+
+    # Location of manpage for this tool.
+    MANPAGE = File.dirname(__FILE__) + '/../man/detroit-locat.5'
+
+    #
+    def prerequisite
+      require 'locat'
+      @path = 'lib'
+    end
 
     # Limit paths of files to render.
     attr_accessor :path
@@ -35,23 +55,6 @@ module Detroit
     # File to generate.
     attr_accessor :output
 
-
-    #  A S S E M B L Y  M E T H O D S
-
-    #
-    def assemble?(station, options={})
-      case station
-      when :generate then true
-      end
-    end
-
-    # Attach to the :generate phase.
-    def assemble(station, options={})
-      case station
-      when :generate then generate
-      end
-    end
-
     #  S E R V I C E  M E T H O D S
 
     # Render templates.
@@ -69,6 +72,15 @@ module Detroit
       locat.run
     end
 
+    # This tool ties into the `generate` station of the
+    # standard assembly.
+    #
+    # @return [Boolean]
+    def assemble?(station, options={})
+      return true if station == :generate
+      return false
+    end
+
   private
 
     #
@@ -77,22 +89,6 @@ module Detroit
       x = [exclude].flatten.compact
       i = [ignore].flatten.compact
       amass(f, x, i)
-    end
-
-    #
-    def initialize_requires
-      require 'locat'
-    end
-
-    #
-    def initialize_defaults
-      @path = 'lib'
-    end
-
-  public
-
-    def self.man_page
-      File.dirname(__FILE__)+'/../man/detroit-locat.5'
     end
 
   end
